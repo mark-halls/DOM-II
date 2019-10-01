@@ -52,3 +52,7 @@ window.addEventListener("afterprint", () => {
 window.addEventListener("resize", () =>
   console.log(`x: ${window.innerWidth}, y: ${window.innerHeight}`)
 );
+
+document.querySelectorAll("p").forEach(p => {
+  p.addEventListener("copy", () => alert("COPIED!!!!!"));
+});
