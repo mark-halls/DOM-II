@@ -20,6 +20,7 @@ bus.src = "media/Public Transit Bus-SoundBible.com-671541921.mp3";
 bus.type = "audio/mpeg";
 bus.style.display = "none";
 document.querySelector("body").appendChild(bus);
+//end audio element
 
 document.querySelector(".intro img").addEventListener("click", () => {
   document.querySelector(".bus-sound").play();
