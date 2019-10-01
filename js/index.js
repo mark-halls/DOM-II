@@ -10,3 +10,21 @@ navLinks.forEach(link => {
     link.style["font-size"] = "1.6rem";
   });
 });
+
+//add audio element to page
+const bus = document.createElement("audio");
+bus.classList.add("bus-sound");
+bus.id = "audio-player";
+bus.controls = "controls";
+bus.src = "media/Public Transit Bus-SoundBible.com-671541921.mp3";
+bus.type = "audio/mpeg";
+bus.style.display = "none";
+document.querySelector("body").appendChild(bus);
+
+document.querySelector(".intro img").addEventListener("click", () => {
+  document.querySelector(".bus-sound").play();
+});
+
+window.addEventListener("scroll", () => {
+  document.querySelector(".bus-sound").pause();
+});
