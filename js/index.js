@@ -40,3 +40,11 @@ window.addEventListener("keyup", () => {
     image.style.display = "inherit";
   });
 });
+
+window.addEventListener("beforeprint", () =>
+  document.querySelectorAll("p").forEach(p => (p.style.background = "blue"))
+);
+
+window.addEventListener("afterprint", () => {
+  document.querySelectorAll("p").forEach(p => (p.style.background = "green"));
+});
