@@ -28,3 +28,15 @@ document.querySelector(".intro img").addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   document.querySelector(".bus-sound").pause();
 });
+
+window.addEventListener("keydown", () => {
+  document.querySelectorAll("img").forEach(image => {
+    image.style.display = "none";
+  });
+});
+
+window.addEventListener("keyup", () => {
+  document.querySelectorAll("img").forEach(image => {
+    image.style.display = "inherit";
+  });
+});
