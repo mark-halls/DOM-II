@@ -48,3 +48,7 @@ window.addEventListener("beforeprint", () =>
 window.addEventListener("afterprint", () => {
   document.querySelectorAll("p").forEach(p => (p.style.background = "green"));
 });
+
+window.addEventListener("resize", () =>
+  console.log(`x: ${window.innerWidth}, y: ${window.innerHeight}`)
+);
