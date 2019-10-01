@@ -9,6 +9,7 @@ navLinks.forEach(link => {
   link.addEventListener("mouseleave", () => {
     link.style["font-size"] = "1.6rem";
   });
+  link.addEventListener("click", e => e.preventDefault());
 });
 
 //add audio element to page
@@ -22,8 +23,14 @@ bus.style.display = "none";
 document.querySelector("body").appendChild(bus);
 //end audio element
 
-document.querySelector(".intro img").addEventListener("click", () => {
+document.querySelector(".intro img").addEventListener("click", e => {
   document.querySelector(".bus-sound").play();
+  e.stopPropagation();
+});
+
+const body = document.querySelector("body");
+body.addEventListener("click", () => {
+  body.style.background = "black";
 });
 
 window.addEventListener("scroll", () => {
